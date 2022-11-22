@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: black;
+    --winning-blocks: goldenrod;
+    --draw-blocks: red;
+}
+
+body {
+    color: var(--black);
+    font-family: warbones;
+}
+
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+}
+
+#music {
+    opacity: 30%;
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./oceanWave.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200%;
+}
+
+#gameboard {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    font-size: 120px; 
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    cursor: crosshair;
+}
+
+.box:hover , .box:focus , .box:active {
+    box-shadow: 10px 10px 10px goldenrod;
+    transform: scale(1.05);
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--black);
+    color: goldenrod;
+    border-color: var(--black);
+    font-family: warbones;
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: crosshair;
+    box-shadow: 10px 10px 10px goldenrod;
+    transform: translateY(-2px);
+}
