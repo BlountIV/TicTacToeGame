@@ -7,7 +7,7 @@ Hey, this is a simple tic tac toe game with a little razzle dazzle of style and 
 ## Introduction
 
 For anyone who doesn't know tic tac toe, you and another player choose who is X or O or in this game "CrossBones" or "Treasure Chest" and you place them on the board of 9 squares or boxes. First one to get 3 in a row win or draw if no one gets 3 in a row. The music being played is my own mix from the groovepad app on mobile phone [Game Motivation] https://en.wikipedia.org/wiki/Tic-tac-toe  and 
-[Live Site]
+[Live Site] https://blountiv.github.io/TicTacToeGame/
 
 - - - 
 
