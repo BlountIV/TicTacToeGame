@@ -4,6 +4,7 @@ let restartBtn = document.getElementById('restartBtn')
 let boxes = Array.from(document.getElementsByClassName('box'))
 let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--winning-blocks')
 let drawIndicator = getComputedStyle(document.body).getPropertyValue('--draw-blocks')
+
 // variables for players 
 const treasureChests = "O"
 const crossBones = "X"
@@ -18,6 +19,7 @@ const startGame = () => {
     boxes.forEach(box => box.addEventListener('click', boxClicked))
 }
 
+// function to check if space was clicked by a player and if clicked by a player then its the next player turn
 function boxClicked(e) {
     const id = e.target.id
 
@@ -25,6 +27,7 @@ function boxClicked(e) {
         spaces[id] = currentPlayer
         e.target.innerText = currentPlayer
 
+        //
         if(playerHasWon() !== false) {
             playerText.innerHTML = `${currentPlayer} has won!`
             let winning_blocks = playerHasWon()
@@ -42,7 +45,7 @@ function boxClicked(e) {
     }
 }
 
-// combos to hit to win game
+// combos to hit to win game with the reverse order to win in any 3 way combo
 const winningCombos = [
     [0,1,2],
     [3,4,6],
@@ -53,7 +56,7 @@ const winningCombos = [
     [0,4,8],
     [2,4,6],
     [2,1,0],
-    [3,4,6],
+    [6,4,3],
     [8,7,6], 
     [6,3,0],
     [7,4,1],
